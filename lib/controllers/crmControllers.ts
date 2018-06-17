@@ -8,8 +8,6 @@ export class ContactController {
     //Method to add the new contact
     public addNewContact(req: Request, res: Response) {
         let newContact = new Contact(req.body);
-        console.log(newContact);
-        console.log(Contact);
         newContact.save((err, contact) => {
             if(err){
                 res.send(err);
